@@ -20,6 +20,7 @@ import seedu.address.model.ModelManager;
 import seedu.address.model.UserPrefs;
 import seedu.address.model.reminders.Reminder;
 
+//@@author justinpoh
 /**
  * Contains integration tests (interaction with the Model) and unit tests for {@code DeleteReminderCommand}.
  */

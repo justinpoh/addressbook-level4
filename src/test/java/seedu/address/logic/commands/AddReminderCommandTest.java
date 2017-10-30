@@ -32,6 +32,7 @@ import seedu.address.model.reminders.exceptions.ReminderNotFoundException;
 import seedu.address.model.tag.Tag;
 import seedu.address.testutil.ReminderBuilder;
 
+//@@author justinpoh
 public class AddReminderCommandTest {
     @Rule
     public ExpectedException thrown = ExpectedException.none();

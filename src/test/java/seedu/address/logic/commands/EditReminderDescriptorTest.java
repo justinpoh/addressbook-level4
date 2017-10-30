@@ -13,6 +13,7 @@ import org.junit.Test;
 import seedu.address.logic.commands.EditReminderCommand.EditReminderDescriptor;
 import seedu.address.testutil.EditReminderDescriptorBuilder;
 
+//@@author justinpoh
 public class EditReminderDescriptorTest {
     @Test
     public void equals() {

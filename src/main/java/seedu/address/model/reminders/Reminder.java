@@ -9,6 +9,7 @@ import java.util.Objects;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
 
+//@@author justinpoh
 /**
  *  Represents a reminder.
  */

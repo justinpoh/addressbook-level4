@@ -8,6 +8,7 @@ import seedu.address.model.reminders.Reminder;
 import seedu.address.model.reminders.UniqueReminderList;
 import seedu.address.storage.XmlSerializableReminders;
 
+//@@author justinpoh
 /**
  * A utility class containing a list of {@code Reminder} objects to be used in tests.
  */

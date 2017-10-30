@@ -10,6 +10,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 import seedu.address.commons.exceptions.IllegalValueException;
 import seedu.address.model.reminders.Reminder;
 
+//@@author justinpoh
 /**
  * A List of reminders that is serializable to XML format.
  */

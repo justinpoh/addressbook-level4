@@ -7,6 +7,7 @@ import seedu.address.logic.commands.EditReminderCommand.EditReminderDescriptor;
 import seedu.address.logic.parser.ParserUtil;
 import seedu.address.model.reminders.Reminder;
 
+//@@author justinpoh
 /**
  * A utility class to help with building EditReminderDescriptor objects.
  */

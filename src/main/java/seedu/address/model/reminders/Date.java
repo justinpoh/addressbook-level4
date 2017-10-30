@@ -7,6 +7,7 @@ import java.time.LocalDate;
 
 import seedu.address.commons.exceptions.IllegalValueException;
 
+//@@author justinpoh
 /**
  * Represents a Reminder's date in the program.
  * Guarantees: immutable; is valid as declared in {@link #isValidDate(String)}

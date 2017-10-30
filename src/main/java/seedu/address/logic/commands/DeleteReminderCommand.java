@@ -8,6 +8,7 @@ import seedu.address.logic.commands.exceptions.CommandException;
 import seedu.address.model.reminders.Reminder;
 import seedu.address.model.reminders.exceptions.ReminderNotFoundException;
 
+//@@author justinpoh
 /**
  * Deletes a reminder identified using it's index.
  */

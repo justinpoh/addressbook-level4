@@ -18,6 +18,7 @@ import seedu.address.model.reminders.Time;
 import seedu.address.model.reminders.exceptions.DuplicateReminderException;
 import seedu.address.model.reminders.exceptions.ReminderNotFoundException;
 
+//@@author justinpoh
 /**
  * Edits the details of an existing reminder in the application.
  */

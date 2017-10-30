@@ -14,6 +14,7 @@ import seedu.address.logic.commands.EditReminderCommand;
 import seedu.address.logic.commands.EditReminderCommand.EditReminderDescriptor;
 import seedu.address.logic.parser.exceptions.ParseException;
 
+//@@author justinpoh
 /**
  * Parses input arguments and creates a new EditReminderCommand object
  */

@@ -11,6 +11,7 @@ import org.junit.Test;
 
 import seedu.address.logic.commands.DeleteReminderCommand;
 
+//@@author justinpoh
 /**
  * As we are only doing white-box testing, our test cases do not cover path variations
  * outside of the DeleteReminderCommand code. For example, inputs "1" and "1 abc" take the

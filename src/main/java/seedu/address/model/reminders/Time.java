@@ -6,6 +6,7 @@ import java.time.LocalTime;
 
 import seedu.address.commons.exceptions.IllegalValueException;
 
+//@@author justinpoh
 /**
  * Represents a Reminder's time in the program.
  * Guarantees: immutable; is valid as declared in {@link #isValidTime(String)}

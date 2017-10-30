@@ -7,6 +7,7 @@ import org.junit.Test;
 
 import seedu.address.model.reminders.Date;
 
+//@@author justinpoh
 public class DateTest {
 
     @Test

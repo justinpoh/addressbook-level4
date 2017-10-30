@@ -65,14 +65,18 @@ public class ModelManager extends ComponentManager implements Model {
         this.addressBook = new AddressBook(addressBook);
         this.reminderList = new UniqueReminderList(reminders);
         filteredPersons = new FilteredList<>(this.addressBook.getPersonList());
+        //@@author justinpoh
         filteredPersonsForBirthdayListPanel = new FilteredList<>(this.addressBook.getPersonList());
         filteredPersonsForBirthdayListPanel.setPredicate(new BirthdayInCurrentMonthPredicate());
+        //@@author
         filteredPersonsForEmail = new FilteredList<>(this.addressBook.getPersonList());
         sortedfilteredPersons = new SortedList<>(filteredPersons);
+        //@@author justinpoh
         sortedFilteredPersonsForBirthdayListPanel = new SortedList<>(filteredPersonsForBirthdayListPanel,
                 Comparator.comparingInt(birthday -> birthday.getBirthday().getDayOfBirthday()));
         sortedReminderList = new SortedList<>(reminderList.asObservableList(),
                 Comparator.comparing(reminder -> reminder.getLocalDateTime()));
+        //@@author
 
     }
 
@@ -87,12 +91,6 @@ public class ModelManager extends ComponentManager implements Model {
     }
 
     @Override
-    public void resetReminders(UniqueReminderList newReminders) {
-        reminderList.setReminders(newReminders);
-        indicateRemindersChanged();
-    }
-
-    @Override
     public ReadOnlyAddressBook getAddressBook() {
         return addressBook;
     }
@@ -102,10 +100,12 @@ public class ModelManager extends ComponentManager implements Model {
         raise(new AddressBookChangedEvent(addressBook));
     }
 
+    //@@author justinpoh
     /** Raises an event to indicate the reminders have changed */
     private void indicateRemindersChanged() {
         raise(new RemindersChangedEvent(reminderList));
     }
+    //@@author
 
     @Override
     public synchronized void deletePerson(ReadOnlyPerson target) throws PersonNotFoundException {
@@ -127,15 +127,6 @@ public class ModelManager extends ComponentManager implements Model {
 
         addressBook.updatePerson(target, editedPerson);
         indicateAddressBookChanged();
-    }
-
-    @Override
-    public void updateReminder(Reminder target, Reminder editedReminder)
-            throws DuplicateReminderException, ReminderNotFoundException {
-        requireAllNonNull(target, editedReminder);
-
-        reminderList.setReminder(target, editedReminder);
-        indicateRemindersChanged();
     }
 
     @Override
@@ -224,6 +215,7 @@ public class ModelManager extends ComponentManager implements Model {
 
     //=========== UniqueReminderList Accessors =================================================================
 
+    //@@author justinpoh
     @Override
     public ObservableList<Reminder> getSortedReminderList() {
         return sortedReminderList;
@@ -247,6 +239,22 @@ public class ModelManager extends ComponentManager implements Model {
     }
 
     @Override
+    public void resetReminders(UniqueReminderList newReminders) {
+        reminderList.setReminders(newReminders);
+        indicateRemindersChanged();
+    }
+
+    @Override
+    public void updateReminder(Reminder target, Reminder editedReminder)
+            throws DuplicateReminderException, ReminderNotFoundException {
+        requireAllNonNull(target, editedReminder);
+
+        reminderList.setReminder(target, editedReminder);
+        indicateRemindersChanged();
+    }
+    //@@author
+
+    @Override
     public boolean equals(Object obj) {
         // short circuit if same object
         if (obj == this) {
@@ -262,7 +270,9 @@ public class ModelManager extends ComponentManager implements Model {
         ModelManager other = (ModelManager) obj;
         return addressBook.equals(other.addressBook)
                 && filteredPersons.equals(other.filteredPersons)
+                //@@author justinpoh
                 && reminderList.equals(other.reminderList);
+                //@@author
     }
 
 }

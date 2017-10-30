@@ -28,6 +28,7 @@ import seedu.address.model.reminders.Reminder;
 import seedu.address.testutil.EditReminderDescriptorBuilder;
 import seedu.address.testutil.ReminderBuilder;
 
+//@@author justinpoh
 public class EditReminderCommandTest {
 
 

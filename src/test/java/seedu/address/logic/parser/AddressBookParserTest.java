@@ -93,6 +93,7 @@ public class AddressBookParserTest {
         assertEquals(new AddCommand(person), command);
     }
 
+    //@@author justinpoh
     @Test
     public void parseCommand_addReminder() throws Exception {
         Reminder reminder = new ReminderBuilder().build();
@@ -100,6 +101,7 @@ public class AddressBookParserTest {
                 + REMINDER_DESC_COFFEE + REMINDER_DESC_DATE_COFFEE + REMINDER_DESC_TIME_COFFEE);
         assertEquals(new AddReminderCommand(reminder), command);
     }
+    //@@author
 
     @Test
     public void parseCommand_clear() throws Exception {
@@ -120,12 +122,14 @@ public class AddressBookParserTest {
         assertEquals(new DeleteCommand(INDEX_FIRST_PERSON), command);
     }
 
+    //@@author justinpoh
     @Test
     public void parseCommand_deleteReminder() throws Exception {
         DeleteReminderCommand command = (DeleteReminderCommand) parser.parseCommand(
                 DeleteReminderCommand.COMMAND_WORD + " " + INDEX_FIRST_PERSON.getOneBased());
         assertEquals(new DeleteReminderCommand(INDEX_FIRST_PERSON), command);
     }
+    //@@author
 
     @Test
     public void parseCommand_sort() throws Exception {
@@ -150,6 +154,7 @@ public class AddressBookParserTest {
         assertEquals(new EditCommand(INDEX_FIRST_PERSON, descriptor), command);
     }
 
+    //@@author justinpoh
     @Test
     public void parseCommand_editReminder() throws Exception {
         Reminder reminder = new ReminderBuilder().build();
@@ -159,6 +164,7 @@ public class AddressBookParserTest {
                 + " " + REMINDER_DESC_COFFEE + REMINDER_DESC_DATE_COFFEE + REMINDER_DESC_TIME_COFFEE);
         assertEquals(new EditReminderCommand(INDEX_FIRST_PERSON, descriptor), command);
     }
+    //@@author
 
     @Test
     public void parseAliasCommand_edit() throws Exception {
@@ -189,11 +195,13 @@ public class AddressBookParserTest {
         assertEquals(new FindCommand(new NameContainsKeywordsPredicate(keywords)), command);
     }
 
+    //@@author justinpoh
     @Test
     public void parseCommand_toggle() throws Exception {
         assertTrue(parser.parseCommand(ToggleCommand.COMMAND_WORD) instanceof ToggleCommand);
         assertTrue(parser.parseCommand(ToggleCommand.COMMAND_WORD + " 3") instanceof ToggleCommand);
     }
+    //@@author
 
     @Test
     public void parseCommand_viewtag() throws Exception {

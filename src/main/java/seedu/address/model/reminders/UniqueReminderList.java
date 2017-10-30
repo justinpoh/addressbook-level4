@@ -11,6 +11,7 @@ import seedu.address.model.reminders.exceptions.DuplicateReminderException;
 import seedu.address.model.reminders.exceptions.ReminderNotFoundException;
 import seedu.address.storage.XmlSerializableReminders;
 
+//@@author justinpoh
 /**
  * A list of reminders that enforces uniqueness between its elements and does not allow nulls.
  *

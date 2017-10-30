@@ -7,6 +7,7 @@ import org.junit.Test;
 
 import seedu.address.model.reminders.Time;
 
+//@@author justinpoh
 public class TimeTest {
 
     @Test

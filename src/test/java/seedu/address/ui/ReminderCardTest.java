@@ -12,6 +12,7 @@ import guitests.guihandles.ReminderCardHandle;
 import seedu.address.model.reminders.Reminder;
 import seedu.address.testutil.ReminderBuilder;
 
+//@@author justinpoh
 public class ReminderCardTest extends GuiUnitTest {
 
     @Test

@@ -5,6 +5,7 @@ import seedu.address.model.reminders.Date;
 import seedu.address.model.reminders.Reminder;
 import seedu.address.model.reminders.Time;
 
+//@@author justinpoh
 /**
  * A utility class to help with building Reminder objects.
  */

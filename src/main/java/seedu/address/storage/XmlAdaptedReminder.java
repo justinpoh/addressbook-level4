@@ -9,6 +9,7 @@ import seedu.address.model.reminders.Date;
 import seedu.address.model.reminders.Reminder;
 import seedu.address.model.reminders.Time;
 
+//@@author justinpoh
 /**
  * JAXB-friendly version of the Reminder.
  */

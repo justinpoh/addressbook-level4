@@ -3,6 +3,7 @@ package guitests.guihandles;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
 
+//@@author justinpoh
 /**
  * Provides a handle to a reminder card in the reminder list panel.
  */

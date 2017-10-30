@@ -98,6 +98,7 @@ public class AddReminderCommandTest {
         command.setData(model, new CommandHistory(), new UndoRedoStack());
         return command;
     }
+    //@@author
 
     /**
      * A default model stub that have all of the methods failing.
@@ -211,6 +212,7 @@ public class AddReminderCommandTest {
         }
     }
 
+    //@@author justinpoh
     /**
      * A Model stub that always accept the reminder being added.
      */
